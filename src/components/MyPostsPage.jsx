@@ -31,7 +31,7 @@ const MyPostsPage = () => {
 
   return (
     <div className="container myPosts">
-      <h1>My Posts</h1>
+      <h1>Gör ett nytt inlägg</h1>
       <div className="newPost">
         <input
           type="text"

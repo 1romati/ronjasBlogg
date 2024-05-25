@@ -7,7 +7,7 @@ const HomePage = () => {
 
   return (
     <div className="container home">
-      <h1>Home Page</h1>
+      <h1>Senaste inläggen</h1>
       {posts.map((post) => (
         <BlogComponent key={post.id} post={post} />
       ))}

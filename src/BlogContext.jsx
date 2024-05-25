@@ -9,14 +9,14 @@ export const BlogProvider = ({ children }) => {
     {
       id: 1,
       author: "Jane Doe",
-      title: "Det första inlägget",
+      title: "Lorem",
       content:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, inventore.",
       comments: [],
     },
     {
       id: 2,
-      author: "John Doe",
+      author: "Lorem2",
       title: "Det andra inlägget",
       content:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, ipsa.",
