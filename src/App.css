@@ -1,0 +1,189 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.header {
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.header a:hover {
+  color: pink;
+  text-decoration: underline;
+}
+
+.header button {
+  background-color: #222222;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.header button:hover {
+  background-color: pink;
+}
+
+.home {
+  margin-top: 20px;
+}
+
+.blogPost {
+  background-color: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blogPost h2 {
+  color: #333;
+}
+
+.blogPost p {
+  color: #555;
+}
+
+.commentDesign {
+  margin-right: 10px;
+}
+
+.post {
+  margin-right: 10px;
+}
+
+.comments {
+  margin-top: 20px;
+}
+
+.comment {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.commentSection input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.commentSection button {
+  background-color: #222222;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.commentSection button:hover {
+  background-color: pink;
+}
+
+.myPosts {
+  margin-top: 20px;
+}
+
+.newPost {
+  background-color: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.newPost input,
+.newPost textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.newPost button {
+  background-color: #222222;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.newPost button:hover {
+  background-color: pink;
+}
+
+.authForm {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+.authForm input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.authForm button {
+  background-color: #222222;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.authForm button:hover {
+  background-color: #585858;
+}
+
+.authForm .authLink {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.authForm .authLink a {
+  color: #222222;
+  text-decoration: none;
+}
+
+.authForm .authLink a:hover {
+  text-decoration: underline;
+}
