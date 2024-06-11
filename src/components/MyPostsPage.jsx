@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import { useBlog } from "../BlogContext";
+import { useUser } from "../UserContext";
 import BlogComponent from "./BlogComponent";
 
 const MyPostsPage = () => {
-  const { currentUser } = useBlog();
   const { posts, addPost, editPost, deletePost } = useBlog();
+  const { user } = useUser();
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
   const handleAddPost = () => {
     const newPost = {
       id: Date.now(),
-      author: currentUser,
+      author: user.email,
       title,
       content,
       comments: [],
@@ -44,16 +45,18 @@ const MyPostsPage = () => {
           onChange={(e) => setContent(e.target.value)}
           placeholder="Content"
         />
-        <button onClick={handleAddPost}>Add Post</button>
+        <button onClick={handleAddPost}>Publicera</button>
       </div>
-      {posts.map((post) => (
-        <div key={post.id}>
+      {posts
+        .filter((post) => post.author === user.email)
+        .map((post) => (
           <BlogComponent
+            key={post.id}
             post={post}
             onDelete={() => handleDeletePost(post.id)}
+            onEdit={handleEditPost}
           />
-        </div>
-      ))}
+        ))}
     </div>
   );
 };

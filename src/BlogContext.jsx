@@ -8,7 +8,7 @@ export const BlogProvider = ({ children }) => {
   const [posts, setPosts] = useState([
     {
       id: 1,
-      author: "Jane Doe",
+      author: "jane.doe@example.com",
       title: "Lorem",
       content:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, inventore.",
@@ -16,7 +16,7 @@ export const BlogProvider = ({ children }) => {
     },
     {
       id: 2,
-      author: "Lorem2",
+      author: "lorem2@example.com",
       title: "Det andra inlägget",
       content:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, ipsa.",
@@ -53,9 +53,49 @@ export const BlogProvider = ({ children }) => {
     setPosts(updatedPosts);
   };
 
+  const editComment = (postId, commentIndex, updatedComment) => {
+    const updatedPosts = posts.map((post) => {
+      if (post.id === postId) {
+        const updatedComments = post.comments.map((comment, index) =>
+          index === commentIndex ? updatedComment : comment
+        );
+        return {
+          ...post,
+          comments: updatedComments,
+        };
+      }
+      return post;
+    });
+    setPosts(updatedPosts);
+  };
+
+  const deleteComment = (postId, commentIndex) => {
+    const updatedPosts = posts.map((post) => {
+      if (post.id === postId) {
+        const updatedComments = post.comments.filter(
+          (comment, index) => index !== commentIndex
+        );
+        return {
+          ...post,
+          comments: updatedComments,
+        };
+      }
+      return post;
+    });
+    setPosts(updatedPosts);
+  };
+
   return (
     <BlogContext.Provider
-      value={{ posts, addPost, editPost, deletePost, addComment }}
+      value={{
+        posts,
+        addPost,
+        editPost,
+        deletePost,
+        addComment,
+        editComment,
+        deleteComment,
+      }}
     >
       {children}
     </BlogContext.Provider>

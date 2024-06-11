@@ -23,7 +23,7 @@ const LoginComponent = () => {
 
   return (
     <div className="authForm">
-      <h2>Login</h2>
+      <h2>Logga in</h2>
       {error && <p>{error}</p>}
       <form onSubmit={handleSubmit}>
         <input
@@ -40,7 +40,7 @@ const LoginComponent = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">Log In</button>
+        <button type="submit">Logga in</button>
       </form>
     </div>
   );

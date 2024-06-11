@@ -17,7 +17,7 @@ const RegisterComponent = () => {
       setCurrentUser(user);
       navigate("/");
     } catch (error) {
-      setError("Failed to create an account");
+      setError("Det gick inte att skapa ett konto");
     }
   };
 
@@ -40,7 +40,7 @@ const RegisterComponent = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">Register</button>
+        <button type="submit">Registrera dig</button>
       </form>
     </div>
   );
